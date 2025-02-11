@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:04:57 by ghambrec          #+#    #+#             */
-/*   Updated: 2024/11/24 18:28:09 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/02/11 11:44:11 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // own created functions
 long	ft_atol(const char *str);
+void	ft_putendl_cc_fd(const char *s, int fd);
 
 #endif
