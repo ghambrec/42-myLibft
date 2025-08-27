@@ -6,7 +6,7 @@
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:13:40 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/04/07 15:50:46 by ghambrec         ###   ########.fr       */
+/*   Updated: 2025/08/27 16:44:53 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ long	ft_atol(const char *str);
 void	ft_putendl_cc_fd(const char *s, int fd);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_str_only_whitespaces(char *str);
-char	**ft_strarr_dup(char **arr);
+char	**ft_str2d_dup(char **arr);
+void	ft_str2d_free(char **str2d);
 
 /* ************************************************************************** */
 /* FT_PRINTF                                                                  */

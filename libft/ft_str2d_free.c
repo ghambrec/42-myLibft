@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarr_dup.c                                    :+:      :+:    :+:   */
+/*   ft_str2d_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghambrec <ghambrec@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 15:47:52 by ghambrec          #+#    #+#             */
-/*   Updated: 2025/04/07 15:48:32 by ghambrec         ###   ########.fr       */
+/*   Created: 2025/08/27 16:41:51 by ghambrec          #+#    #+#             */
+/*   Updated: 2025/08/27 16:45:19 by ghambrec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char	**ft_strarr_dup(char **arr)
+void	ft_str2d_free(char **str2d)
 {
-	int		i;
-	char	**copy;
+	int	pos;
 
-	i = 0;
-	while (arr[i])
-		i++;
-	copy = (char **)malloc((i + 1) * sizeof(*copy));
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (arr[i])
+	if (!str2d)
+		return ;
+	pos = 0;
+	while (str2d[pos])
 	{
-		copy[i] = ft_strdup(arr[i]);
-		if (!copy[i])
-		{
-			while (--i >= 0)
-				free(copy[i]);
-			free(copy);
-			return (NULL);
-		}
-		i++;
+		free(str2d[pos]);
+		str2d[pos] = NULL;
+		pos++;
 	}
-	copy[i] = NULL;
-	return (copy);
+	free(str2d);
 }
